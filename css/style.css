@@ -422,9 +422,10 @@ img {
 /* ===== Contact List ===== */
 .contact-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    gap: 1.2rem;
+    gap: 2rem;
 }
 
 .contact-item {
@@ -433,8 +434,9 @@ img {
 
 .contact-link {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
+    gap: 0.5rem;
     text-decoration: none;
     font-size: 1.7rem;
     padding: 1.2rem 1.5rem;
@@ -449,27 +451,22 @@ img {
 }
 
 .contact-link i {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     width: 3rem;
     text-align: center;
     color: var(--sticky-menu-text-color);
 }
 
 .contact-label {
-    text-transform: uppercase;
-    font-family: "Proza Libre", sans-serif;
-    font-weight: 500;
-    font-size: 1.2rem;
-    letter-spacing: 0.1em;
-    min-width: 100px;
-    opacity: 0.7;
+    display: none;
 }
 
 .contact-value {
     color: var(--sticky-menu-text-color);
     font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     font-weight: 500;
+    text-align: center;
 }
 
 /* Center the contact section */
@@ -686,9 +683,7 @@ img {
     }
 
     .contact-list {
-        flex-direction: row;
-        justify-content: center;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     .contact-link {
@@ -699,18 +694,7 @@ img {
         font-size: 3rem;
     }
 
-    .contact-label,
     .contact-value {
         display: none;
-    }
-
-    .contact-label {
-        min-width: auto;
-        width: 100%;
-        margin-bottom: 0.3rem;
-    }
-
-    .contact-value {
-        font-size: 1.7rem;
     }
 }
