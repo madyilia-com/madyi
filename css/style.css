@@ -412,11 +412,23 @@ img {
 }
 
 .post-content img {
-    display: block;
-    max-width: 50%;
-    margin: 1.5em auto;
+    float: right;
+    max-width: 40%;
+    margin: 0.5em 0 1em 2em;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    shape-outside: margin-box;
+}
+
+.post-holder:nth-child(even) .post-content img {
+    float: left;
+    margin: 0.5em 2em 1em 0;
+}
+
+.post-content::after {
+    content: '';
+    display: table;
+    clear: both;
 }
 
 /* ===== Contact List ===== */
@@ -489,6 +501,13 @@ img {
     text-align: center;
 }
 
+#mi-espacio .post-content img {
+    float: none;
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 1.5rem;
+}
+
 .address-link {
     display: block;
     font-family: "Cormorant Garamond", Georgia, serif;
@@ -525,11 +544,42 @@ img {
 
 .carousel-track {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease;
+}
+
+.carousel-track.no-transition {
+    transition: none;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.carousel-btn {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: inherit;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.35);
 }
 
 .testimonial-card {
-    flex: 0 0 calc(100% / 3);
+    flex: 0 0 50%;
     margin: 0;
     padding: 1rem;
     box-sizing: border-box;
@@ -597,32 +647,6 @@ img {
     color: #f4c150;
 }
 
-.carousel-controls {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.carousel-btn {
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: inherit;
-    width: 4.5rem;
-    height: 4.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.carousel-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.35);
-}
 
 /* ===== Pricing / Tarifas ===== */
 #tarifas {

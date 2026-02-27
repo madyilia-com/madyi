@@ -96,45 +96,71 @@
         requestAnimationFrame(animation);
     }
 
-    // Testimonials carousel
+    // Infinite testimonials carousel
     function initCarousel() {
-        const track = document.querySelector('.carousel-track');
-        const prevBtn = document.querySelector('.carousel-prev');
-        const nextBtn = document.querySelector('.carousel-next');
+        var track = document.querySelector('.carousel-track');
+        var prevBtn = document.querySelector('.carousel-prev');
+        var nextBtn = document.querySelector('.carousel-next');
         if (!track || !prevBtn || !nextBtn) return;
 
-        const cards = track.querySelectorAll('.testimonial-card');
-        const totalCards = cards.length;
-        let currentIndex = 0;
+        var originals = Array.from(track.querySelectorAll('.testimonial-card'));
+        var total = originals.length;
 
-        function getVisibleCount() {
-            return window.innerWidth <= 500 ? 1 : 3;
+        // Clone all cards: [clones] [originals] [clones]
+        originals.forEach(function(card) {
+            track.appendChild(card.cloneNode(true));
+        });
+        for (var i = originals.length - 1; i >= 0; i--) {
+            track.insertBefore(originals[i].cloneNode(true), track.firstChild);
         }
 
-        function updateCarousel() {
-            const visible = getVisibleCount();
-            const maxIndex = Math.max(0, totalCards - visible);
-            currentIndex = Math.min(currentIndex, maxIndex);
-            const offset = -(currentIndex * (100 / visible));
-            track.style.transform = 'translateX(' + offset + '%)';
+        var allCards = track.querySelectorAll('.testimonial-card');
+        var index = total; // start at first original
+        var moving = false;
+
+        function getCardWidth() {
+            return allCards[0].offsetWidth;
         }
+
+        function setPosition(i, animate) {
+            if (!animate) {
+                track.classList.add('no-transition');
+            }
+            track.style.transform = 'translateX(' + -(i * getCardWidth()) + 'px)';
+            index = i;
+            if (!animate) {
+                track.offsetHeight; // force reflow
+                track.classList.remove('no-transition');
+            }
+        }
+
+        function onTransitionEnd(e) {
+            if (e.target !== track) return;
+            moving = false;
+            // Snap back to the real card if we're in the cloned zone
+            if (index >= total * 2) {
+                setPosition(index - total, false);
+            } else if (index < total) {
+                setPosition(index + total, false);
+            }
+        }
+
+        track.addEventListener('transitionend', onTransitionEnd);
 
         nextBtn.addEventListener('click', function() {
-            const visible = getVisibleCount();
-            const maxIndex = totalCards - visible;
-            currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
-            updateCarousel();
+            if (moving) return;
+            moving = true;
+            setPosition(index + 1, true);
         });
 
         prevBtn.addEventListener('click', function() {
-            const visible = getVisibleCount();
-            const maxIndex = totalCards - visible;
-            currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
-            updateCarousel();
+            if (moving) return;
+            moving = true;
+            setPosition(index - 1, true);
         });
 
-        window.addEventListener('resize', updateCarousel);
-        updateCarousel();
+        setPosition(index, false);
+        window.addEventListener('resize', function() { setPosition(index, false); });
     }
 
     // Initialize
