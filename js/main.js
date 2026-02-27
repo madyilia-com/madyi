@@ -96,6 +96,47 @@
         requestAnimationFrame(animation);
     }
 
+    // Testimonials carousel
+    function initCarousel() {
+        const track = document.querySelector('.carousel-track');
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+        if (!track || !prevBtn || !nextBtn) return;
+
+        const cards = track.querySelectorAll('.testimonial-card');
+        const totalCards = cards.length;
+        let currentIndex = 0;
+
+        function getVisibleCount() {
+            return window.innerWidth <= 500 ? 1 : 3;
+        }
+
+        function updateCarousel() {
+            const visible = getVisibleCount();
+            const maxIndex = Math.max(0, totalCards - visible);
+            currentIndex = Math.min(currentIndex, maxIndex);
+            const offset = -(currentIndex * (100 / visible));
+            track.style.transform = 'translateX(' + offset + '%)';
+        }
+
+        nextBtn.addEventListener('click', function() {
+            const visible = getVisibleCount();
+            const maxIndex = totalCards - visible;
+            currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', function() {
+            const visible = getVisibleCount();
+            const maxIndex = totalCards - visible;
+            currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
+            updateCarousel();
+        });
+
+        window.addEventListener('resize', updateCarousel);
+        updateCarousel();
+    }
+
     // Initialize
     document.addEventListener('DOMContentLoaded', function() {
         // Set current year in footer
@@ -106,6 +147,9 @@
 
         // Set initial state
         handleScroll();
+
+        // Init carousel
+        initCarousel();
 
         // Add scroll listener with throttle for performance
         let ticking = false;
