@@ -23,8 +23,8 @@
     --section-uni-code-bg-color: #e0ded7;
 
     /* Footer */
-    --footer-color-background: #22343a;
-    --footer-color: #bbc7cc;
+    --footer-color-background: #f4a896;
+    --footer-color: #3a2a26;
 
     /* Dynamic variables */
     --color-text: var(--section-light-text-color);
