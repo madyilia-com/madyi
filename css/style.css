@@ -8,23 +8,23 @@
     --highlight-inverse-contrast: white;
 
     /* Sticky navigation */
-    --sticky-menu-text-color: #448ca7;
+    --sticky-menu-text-color: #2d6e6b;
 
     /* Light section */
     --section-light-text-color: #3a4145;
     --section-light-bg-color: #f2efe8;
 
     /* Dark section */
-    --section-dark-text-color: #f2efe8;
-    --section-dark-bg-color: #448ca7;
+    --section-dark-text-color: #fdf8ec;
+    --section-dark-bg-color: #4ba89c;
 
     /* Shared */
     --section-uni-quote: grey;
     --section-uni-code-bg-color: #e0ded7;
 
     /* Footer */
-    --footer-color-background: #f4a896;
-    --footer-color: #3a2a26;
+    --footer-color-background: #f5e6d3;
+    --footer-color: #2d6e6b;
 
     /* Dynamic variables */
     --color-text: var(--section-light-text-color);
@@ -370,7 +370,7 @@ img {
 }
 
 .post-holder.light::after {
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C150,90 350,0 500,50 C650,100 800,20 1000,80 C1100,100 1150,60 1200,80 L1200,120 L0,120 Z' fill='%23448ca7'/%3E%3C/svg%3E") no-repeat bottom center;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C150,90 350,0 500,50 C650,100 800,20 1000,80 C1100,100 1150,60 1200,80 L1200,120 L0,120 Z' fill='%234ba89c'/%3E%3C/svg%3E") no-repeat bottom center;
     background-size: 100% 100%;
 }
 
@@ -483,7 +483,11 @@ img {
 
 .post-holder.dark .contact-link i,
 .post-holder.dark .contact-value {
-    --contact-accent: var(--highlight-inverse);
+    --contact-accent: var(--section-dark-text-color);
+}
+
+.post-holder.dark .contact-link i {
+    font-size: 4.2rem;
 }
 
 .post-holder.dark .contact-link:hover {
@@ -651,6 +655,7 @@ img {
 /* ===== Pricing / Tarifas ===== */
 #tarifas {
     text-align: center;
+    padding-bottom: 8rem;
 }
 
 .pricing-cards {
@@ -696,7 +701,7 @@ img {
 /* Center the contact section */
 #contacto {
     text-align: center;
-    padding-top: 6rem;
+    padding-top: 10rem;
     padding-bottom: 6rem;
 }
 
