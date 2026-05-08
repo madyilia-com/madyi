@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madyilia Ramos - Psicóloga & Coach Personal</title>
-    <meta name="description" content="Madyilia Ramos, psicóloga y coach personal en Tenerife. Especialista en desarrollo personal, terapia de duelo y EMDR. Sesiones presenciales y online.">
+    <title>Psicóloga en Tenerife · EMDR y Duelo · Madyilia Ramos</title>
+    <meta name="description" content="Psicóloga y coach personal en La Laguna (Tenerife). Especialista en EMDR, terapia de duelo y desarrollo personal. Sesiones presenciales y online.">
     <meta name="robots" content="index, follow">
+    <meta name="author" content="Madyilia Ramos">
     <link rel="canonical" href="https://madyilia.com/">
 
     <!-- Favicon -->
@@ -13,25 +14,37 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Madyilia Ramos - Psicóloga & Coach Personal en Tenerife">
-    <meta property="og:description" content="Especialista en desarrollo personal, terapia de duelo y EMDR. Sesiones presenciales y online.">
+    <meta property="og:title" content="Madyilia Ramos · Psicóloga & Coach Personal en Tenerife">
+    <meta property="og:description" content="Especialista en EMDR, terapia de duelo y desarrollo personal. Consulta en La Laguna y sesiones online.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://madyilia.com/">
     <meta property="og:image" content="https://madyilia.com/images/madyi.png">
+    <meta property="og:image:alt" content="Madyilia Ramos, psicóloga y coach personal en Tenerife">
     <meta property="og:locale" content="es_ES">
     <meta property="og:site_name" content="Madyilia Ramos">
 
-    <!-- JSON-LD Structured Data -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Madyilia Ramos · Psicóloga & Coach Personal en Tenerife">
+    <meta name="twitter:description" content="Especialista en EMDR, terapia de duelo y desarrollo personal. Consulta en La Laguna y sesiones online.">
+    <meta name="twitter:image" content="https://madyilia.com/images/madyi.png">
+
+    <!-- JSON-LD: ProfessionalService -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
+      "@id": "https://madyilia.com/#service",
       "name": "Madyilia Ramos - Psicóloga & Coach Personal",
-      "description": "Psicóloga y coach personal especializada en desarrollo personal, terapia de duelo y EMDR. Sesiones presenciales en Tenerife y online.",
+      "description": "Psicóloga y coach personal especializada en desarrollo personal, terapia de duelo y EMDR. Sesiones presenciales en La Laguna (Tenerife) y online.",
       "url": "https://madyilia.com/",
       "image": "https://madyilia.com/images/madyi.png",
+      "logo": "https://madyilia.com/images/madyi.png",
       "telephone": "+34636353736",
       "email": "contacta@madyilia.com",
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Cash, Bank transfer, Bizum",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Avenida Los Majuelos, 7C. Edf. Residencial Los Arca",
@@ -40,27 +53,99 @@
         "postalCode": "38108",
         "addressCountry": "ES"
       },
-      "areaServed": [
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.4540,
+        "longitude": -16.3060
+      },
+      "openingHoursSpecification": [
         {
-          "@type": "Place",
-          "name": "Tenerife"
-        },
-        {
-          "@type": "Place",
-          "name": "Online"
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "20:00"
         }
+      ],
+      "areaServed": [
+        {"@type": "Place", "name": "Tenerife"},
+        {"@type": "Place", "name": "La Laguna"},
+        {"@type": "Place", "name": "Santa Cruz de Tenerife"},
+        {"@type": "Place", "name": "Online"}
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Servicios de Psicología y Coaching",
         "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Desarrollo Personal"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Terapia de Duelo"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Terapia EMDR"}}
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Terapia de Desarrollo Personal", "serviceType": "Psicoterapia"}, "price": "60", "priceCurrency": "EUR"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Terapia de Duelo", "serviceType": "Psicoterapia"}, "price": "60", "priceCurrency": "EUR"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Terapia EMDR", "serviceType": "Psicoterapia"}, "price": "60", "priceCurrency": "EUR"},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Terapia de Pareja", "serviceType": "Psicoterapia"}, "price": "70", "priceCurrency": "EUR"}
         ]
       },
       "sameAs": [
+        "_PLACEHOLDER_DOCTORALIA_URL_",
+        "_PLACEHOLDER_GOOGLE_BUSINESS_PROFILE_URL_",
+        "_PLACEHOLDER_COP_FICHA_COLEGIADA_URL_"
       ]
+    }
+    </script>
+
+    <!-- JSON-LD: Person (autoridad / E-E-A-T) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://madyilia.com/#person",
+      "name": "Madyilia Ramos",
+      "jobTitle": "Psicóloga y Coach Personal",
+      "description": "Psicóloga clínica y coach personal especializada en terapia EMDR, duelo y desarrollo personal.",
+      "image": "https://madyilia.com/images/madyi.png",
+      "url": "https://madyilia.com/",
+      "worksFor": {"@id": "https://madyilia.com/#service"},
+      "knowsAbout": ["Terapia EMDR", "Duelo", "Desarrollo personal", "Psicología clínica", "Coaching"],
+      "knowsLanguage": ["es"],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "license",
+          "name": "Colegiada en el Colegio Oficial de Psicólogos",
+          "recognizedBy": {"@type": "Organization", "name": "Colegio Oficial de Psicólogos de Las Palmas / Santa Cruz de Tenerife"},
+          "identifier": "_PLACEHOLDER_NUMERO_COLEGIADA_"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "Terapia EMDR",
+          "recognizedBy": {"@type": "Organization", "name": "EMDR Europe", "url": "https://emdr-europe.org/"}
+        }
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "_PLACEHOLDER_UNIVERSIDAD_"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://madyilia.com/"}
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://madyilia.com/",
+      "name": "Madyilia Ramos",
+      "inLanguage": "es-ES",
+      "publisher": {"@id": "https://madyilia.com/#service"}
     }
     </script>
 
@@ -96,12 +181,13 @@
             <a class="nav-item" href="#opiniones" data-section="opiniones">Opiniones</a>
             <a class="nav-item" href="#tarifas" data-section="tarifas">Tarifas</a>
             <a class="nav-item" href="#contacto" data-section="contacto">Contacto</a>
+            <a class="nav-item" href="/faq.html">FAQ</a>
         </div>
     </nav>
 
     <!-- Header / Hero Section -->
     <header id="site-head">
-        <video autoplay muted loop playsinline>
+        <video autoplay muted loop playsinline preload="metadata" poster="images/hero-poster.jpg" aria-hidden="true">
             <source src="videos/header.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
@@ -111,7 +197,7 @@
                 <h1 class="blog-title">Madyilia Ramos</h1>
                 <h2 class="blog-description"><b>Psicóloga</b> & <b>Coach</b> Personal</h2>
                 <!-- <a class="cta-button" href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contacta-madyilia'});return false;">Concertar una cita</a> -->
-                <a class="cta-button" href="#contacto">Concertar una cita</a>
+                <a class="cta-button" href="#contacto" aria-label="Concertar una cita por WhatsApp, teléfono o email">Concertar una cita</a>
             </div>
         </div>
 
@@ -129,7 +215,7 @@
                     <h2 class="post-title">Desarrollo Personal</h2>
                 </header>
                 <section class="post-content">
-                    <img src="images/desarrollopersonal.jpg" alt="Desarrollo personal">
+                    <img src="images/desarrollopersonal.jpg" alt="Sesión de terapia de desarrollo personal con Madyilia Ramos en Tenerife" loading="lazy" width="400" height="300">
                     <p>La terapia de desarrollo personal es un proceso transformador diseñado para ayudarte a descubrir y potenciar tu verdadero potencial. A través de un acompañamiento especializado, trabajaremos juntos para fortalecer tu autoestima, mejorar tus relaciones, desarrollar una mentalidad resiliente y construir las herramientas necesarias para crear una vida más plena y significativa, alineada con tus valores y metas personales.</p>
                 </section>
             </article>
@@ -142,7 +228,7 @@
                     <h2 class="post-title">Terapia de duelo</h2>
                 </header>
                 <section class="post-content">
-                    <img src="images/duelo.jpg" alt="Terapia de duelo">
+                    <img src="images/duelo.jpg" alt="Acompañamiento profesional en terapia de duelo en La Laguna, Tenerife" loading="lazy" width="400" height="300">
                     <p>La terapia de duelo es un espacio seguro y especializado donde encontrarás el apoyo profesional necesario para atravesar la pérdida de un ser querido. A través de un acompañamiento empático y técnicas específicas, te ayudaré a transformar el dolor en crecimiento personal, permitiéndote honrar la memoria de quien ya no está mientras reconstruyes tu camino hacia una nueva etapa de vida. Mi enfoque se centra en respetar tu proceso único, proporcionándote las herramientas necesarias para sanar y redescubrir el sentido y la alegría en tu vida.</p>
                 </section>
             </article>
@@ -155,7 +241,7 @@
                     <h2 class="post-title">Terapia EMDR</h2>
                 </header>
                 <section class="post-content">
-                    <img src="images/felicidad.jpg" alt="Terapia EMDR">
+                    <img src="images/felicidad.jpg" alt="Terapia EMDR para procesar experiencias traumáticas — consulta en Tenerife y online" loading="lazy" width="400" height="300">
                     <p>La terapia EMDR es un método terapéutico que ayuda a procesar y liberar experiencias traumáticas o memorias perturbadoras que impactan en tu bienestar actual. Mediante técnicas que emulan el procesamiento natural del cerebro, esta terapia científicamente probada te permite transformar el impacto de experiencias difíciles, reduciendo significativamente la angustia emocional y permitiéndote recuperar tu libertad y bienestar emocional.</p>
                 </section>
             </article>
@@ -168,7 +254,7 @@
                     <h2 class="post-title">Acerca de mi</h2>
                 </header>
                 <section class="post-content">
-                    <img src="images/madyi.png" alt="Madyilia">
+                    <img src="images/madyi.png" alt="Retrato de Madyilia Ramos, psicóloga y coach personal" loading="lazy" width="400" height="500">
                     <p>Como psicóloga y coach personal, me dedico a acompañar a personas que, como tú, buscan transformar sus desafíos en oportunidades de crecimiento. Mi enfoque combina una sólida formación en psicología con especializaciones en terapia EMDR, acompañamiento en procesos de duelo y desarrollo personal, permitiéndome ofrecer un apoyo integral y personalizado para cada persona. Mi compromiso es crear un espacio seguro y confidencial donde puedas explorar tus emociones, procesar experiencias difíciles y desarrollar las herramientas necesarias para alcanzar tu mejor versión.</p>
                     <p>A lo largo de mi trayectoria profesional, he ayudado a numerosas personas a superar traumas, gestionar pérdidas significativas y descubrir su potencial interior. Mi aproximación combina calidez humana con rigor profesional, adaptando las técnicas más efectivas a las necesidades específicas de cada persona. Creo firmemente en la capacidad de transformación y crecimiento que todos poseemos, y mi mayor satisfacción es ser testigo y facilitadora de estos procesos de cambio positivo en la vida de mis pacientes.</p>
                 </section>
@@ -182,7 +268,7 @@
                     <h2 class="post-title">Mi espacio</h2>
                 </header>
                 <section class="post-content">
-                    <img src="images/office.png" alt="Consulta de Madyilia Ramos">
+                    <img src="images/office.png" alt="Consulta de psicología de Madyilia Ramos en Avenida Los Majuelos, La Laguna" loading="lazy" width="600" height="400">
                     <a href="https://www.google.com/maps/dir//Avenida+Los+Majuelos+7C+Edf+Residencial+Los+Arca+38108+La+Laguna+Tenerife" class="address-link" target="_blank" rel="noopener">
                         <i class="fa fa-location-dot"></i>
                         Avenida Los Majuelos, 7C. Edf. Residencial Los Arca. 38108 La Laguna, Tenerife
@@ -295,7 +381,7 @@
                             </a>
                         </div>
                         <div class="contact-item">
-                            <a href="https://wa.me/+34636353736" class="contact-link" target="_blank" rel="noopener">
+                            <a href="https://wa.me/34636353736" class="contact-link" target="_blank" rel="noopener">
                                 <i class="fa-brands fa-whatsapp"></i>
                                 <span class="contact-label">whatsapp</span>
                                 <span class="contact-value">Madyilia</span>
@@ -310,6 +396,11 @@
     <!-- Footer -->
     <footer class="site-footer">
         <p class="copyright">&copy; Madyilia Ramos - <span id="current-year"></span></p>
+        <nav class="footer-links" aria-label="Enlaces legales">
+            <a href="/faq.html">Preguntas frecuentes</a>
+            <a href="/aviso-legal.html">Aviso legal</a>
+            <a href="/privacidad.html">Política de privacidad</a>
+        </nav>
     </footer>
 
     <!-- JavaScript -->
